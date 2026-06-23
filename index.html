@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Sign-up Form</title>
 </head>
+
 <body>
-    <div class="container">
+    <main class="container">
 
         <div id="image-container">
-            <div>
-                <img src="" alt="">
-                <span></span>
+            <div id="logo-container">
+                <img id="logo" src="./images/odin-lined.png" alt="Odin Logo">
+                <span>ODIN</span>
             </div>
-
-            <p>
-                Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </p>
+            <div id="credit-container">
+                <p>
+                    Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
+            </div>
+           
         </div>
 
-        <form>
-           <section>
-            <p>
-                This is not a real online service! You know you need something like this in
-                your life to help you realize your deepest dreams. Sign up now to get started.
-            </p>
-            <p>
-                You know you want to.
-            </p>
-            <p>
-                Let's do this!
-            </p>
-           </section>
+        <div id="content-container">
 
-           <div id="form-info">
-            
-                <section id="name-info">
-                    <p>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first"></input>
-                    </p>
-
-                    <p>
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last"></input>
-                    </p>
-                </section>
-
-                <section id="contact">
-                    <p>
-                        <label for="mail">EMAIL</label>
-                        <input type="email" id="mail" name="user-email">
-                    </p>
-
-                    <p>
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="user-phone">
-                    </p>
-
-                </section>
-
-                <section id="password">
-                    <p>
-                        <label for="pwd">PASSWORD</label>
-                        <input type="password" id="pwd" name="user-password">
-                    </p>
-
-                    <p>
-                        <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="pwd-confirm" name="user-password-confirm">
-                    </p>
-                </section>
-
-           </div>
-
-           <section>
-                <button type="button">Create Account</button>
-                <p>Already have an account? <a href="#">Log in</a></p>
-           </section>
+           <header id="form-header">
+                <p>
+                    This is not a real online service! You know you need something like this in
+                    your life to help you realize your deepest dreams. Sign up now to get started.
+                </p>
+                <p>
+                    You know you want to.
+                </p>
            
-        </form>
-    </div>
+            </header>
+
+           <form action="#" method="POST">
+                <div id="form-info">
+                    <p>
+                        Let's do this!
+                    </p>
+                
+                    <fieldset id="name-info">
+                        <legend class="sr-only">Personal Information</legend>
+                        <p>
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" id="first-name" name="first"></input>                                                                                    
+                        </p>
+
+                        <p>
+                            
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" id="last-name" name="last"></input>
+                        </p>
+                    </fieldset>
+
+                    <fieldset id="contact">
+                        <legend class="sr-only">Contact Information</legend>
+                        <p>
+                            <label for="mail">EMAIL</label>
+                            <input type="email" id="mail" name="user-email">
+                        </p>
+
+                        <p>
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" name="user-phone">
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset id="password">
+                        <legend class="sr-only">Security</legend>
+                        <p>
+                            <label for="pwd">PASSWORD</label>
+                            <input type="password" id="pwd" name="user-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.">
+                        </p>
+
+                        <p>
+                            <label for="pwd-confirm">CONFIRM PASSWORD</label>
+                            <input type="password" id="pwd-confirm" name="user-password-confirm" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number." >
+                        </p>
+                    </fieldset>
+
+                </div>
+
+                <div id="form-actions">
+                        <button type="button">Create Account</button>
+                        <p>Already have an account? <a href="#">Log in</a></p>
+                </div>                
+
+
+            </form>
+
+        </div>
+    </main>
 </body>
 </html>
+
