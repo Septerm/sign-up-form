@@ -60,8 +60,8 @@
                     <fieldset id="contact">
                         <legend class="sr-only">Contact Information</legend>
                         <p>
-                            <label for="mail">EMAIL</label>
-                            <input type="email" id="mail" name="user-email">
+                            <label for="mail">EMAIL*</label>
+                            <input type="email" id="mail" name="user-email" required>
                         </p>
 
                         <p>
@@ -74,13 +74,13 @@
                     <fieldset id="password">
                         <legend class="sr-only">Security</legend>
                         <p>
-                            <label for="pwd">PASSWORD</label>
-                            <input type="password" id="pwd" name="user-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.">
+                            <label for="pwd">PASSWORD*</label>
+                            <input type="password" id="pwd" name="user-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number." required>
                         </p>
 
                         <p>
-                            <label for="pwd-confirm">CONFIRM PASSWORD</label>
-                            <input type="password" id="pwd-confirm" name="user-password-confirm" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number." >
+                            <label for="pwd-confirm">CONFIRM PASSWORD*</label>
+                            <input type="password" id="pwd-confirm" name="user-password-confirm" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number." required >
                         </p>
                     </fieldset>
 
@@ -89,10 +89,19 @@
                 <div id="form-actions">
                         <button type="button">Create Account</button>
                         <p>Already have an account? <a href="#">Log in</a></p>
-                </div>                
+                </div> 
+                
+               
 
 
             </form>
+
+            <footer>
+                    <a href="https://github.com/Septerm/sign-up-form">
+                        <img src="./images/github-img.svg" alt="Github logo">
+                    </a>
+                    <p itemprop="author" itemscope itemtype="https://schema.org/Person">Created by <span itemprop="name">Garion Charles</span></p>
+            </footer>
 
         </div>
     </main>
